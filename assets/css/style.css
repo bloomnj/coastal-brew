@@ -1,0 +1,711 @@
+/* Universal Styles */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-title,
+h1,
+h2,
+.section-title,
+.logo-text {
+  font-family: 'Playfair Display', serif;
+}
+
+#philosophy,
+#collection,
+#crew,
+#contact {
+  scroll-margin-top: 4rem;
+}
+
+/* Universal Styles -- Cellphone Screens */
+@media only screen and (max-width: 47.5rem) {
+  header,
+  main,
+  section,
+  #hero-banner,
+  #philosophy,
+  #collection,
+  #crew,
+  #contact {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #philosophy,
+  #collection,
+  #crew,
+  #contact {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scroll-margin-top: 1rem;
+  }
+
+  .collection-grid,
+  .crew-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Header */
+header {
+  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(31, 52, 66, 0.82);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  color: #F5F2EC;
+}
+
+.anchor-logo {
+  fill: currentColor;
+  height: 36px;
+  width: 36px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+ul {
+  display: flex;
+  gap: 3.5rem;
+}
+
+li {
+  align-content: center;
+  font-weight: 500;
+  height: 1.5625rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #F5F2EC;
+}
+
+nav a:hover {
+  color: #B08D57;
+}
+
+/* Header -- Cellphone screens */
+@media only screen and (max-width: 47.5rem) {
+  header {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    position: relative;
+  }
+
+  .logo-text {
+    font-size: 1.35rem;
+  }
+
+  .anchor-logo {
+    height: 32px;
+    width: 32px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    justify-content: center;
+  }
+
+  li {
+    padding-right: 0;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+  }
+}
+
+/* Header -- Tablet screens */
+@media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
+  nav ul {
+    gap: 2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  header {
+    padding: 1.25rem 3rem;
+  }
+}
+
+/* Hero Banner */
+#hero-banner {
+  align-items: flex-start;
+  background-attachment: fixed;
+  background-image: url('../img/banner-background.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 90vh;
+  overflow: hidden;
+  padding-top: 10rem;
+  position: relative;
+}
+
+#hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 30, 40, 0.42) 0%,
+    rgba(20, 30, 40, 0.28) 35%,
+    rgba(20, 30, 40, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  position: relative;
+  max-width: 42rem;
+  z-index: 2;
+}
+
+.hero-title {
+  color: #F5F2EC;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.05;
+  max-width: 12ch;
+}
+
+.hero-subtitle {
+  color: rgba(245, 242, 236, 0.92);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  max-width: 26rem;
+  padding: 1rem;
+}
+
+.hero-button {
+  background: #F5F2EC;
+  border: none;
+  border-radius: 999px;
+  color: #1F3442;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  padding: 1rem 1.5rem;
+  transition: all .2s ease;
+  width: fit-content;
+}
+
+.hero-button:hover {
+  background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Banner -- Cellphone Screens */
+@media only screen and (max-width: 47.5rem) {  
+  #hero-banner {
+    background-attachment: scroll;
+    background-position: center right;
+    height: auto;
+    min-height: 80vh;
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 12vw, 3.8rem);
+    line-height: 1.05;
+    max-width: 13ch;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 18rem;
+    padding: 0;
+  }
+
+  .hero-button {
+    margin-top: 2rem;
+  }
+}
+
+/* Hero Banner -- Tablet screens */
+@media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
+  #hero-banner {
+    background-attachment: scroll;
+    height: 75vh;
+    padding-top: 9rem;
+  }
+
+  .hero-content {
+    padding-left: 4rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 4.5vw, 4.5rem);
+  }
+}
+
+/* Our Philosophy */
+#philosophy {
+  background: #F5F2EC;
+  box-shadow: inset 0 30px 40px rgba(225, 225, 225, 0.15);
+  color: #1F3442;
+  padding: 6rem 4rem 5rem;
+  text-align: center;
+}
+
+#philosophy h2 {
+  font-size: clamp(2.5rem, 9vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  max-width: 12ch;
+  margin: 0 auto 2rem;
+}
+
+#philosophy p {
+  max-width: 40rem;
+  margin: 0 auto 1.25rem;
+  line-height: 2;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+/* The Collection */
+#collection {
+  background: #1F3442;
+  color: #F5F2EC;
+  padding: 7rem 4rem;
+}
+
+#collection h2 {
+  font-size: clamp(2.75rem, 4.5vw, 4rem);
+  margin: 1.5rem 0;
+  color: #F5F2EC;
+}
+
+.collection-subtitle {
+  line-height: 1.8;
+  max-width: 50em;
+  opacity: 0.9;
+}
+
+.collection-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 6rem;
+}
+
+.collection-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: transform .2s ease;
+}
+
+.collection-image {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.collection-card img {
+  aspect-ratio: 4 / 5;
+  display: block;
+  height: 100%;
+  margin-bottom: 1.5rem;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.collection-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1.5rem;
+  padding-inline: 0.25rem;
+}
+
+.collection-card p {
+  line-height: 1.5;
+  max-width: 28ch;
+  opacity: 0.9;
+}
+
+.collection-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Collection -- Cellphone Screens */
+@media only screen and (max-width: 47.5rem) {
+  #collection {
+    padding: 5rem 1.5rem;
+  }
+
+  .collection-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .collection-subtitle {
+    margin-bottom: 3rem;
+    max-width: 24ch;
+    line-height: 1.8;
+  }
+
+  .collection-card {
+    padding: 1.5rem;
+  }
+
+  .collection-card img {
+    border-radius: 12px;
+  }
+
+  .collection-card p {
+    line-height: 1.5;
+    max-width: 22ch;
+  }
+
+  .collection-grid {
+    gap: 2rem;
+  }
+}
+
+/* Collection -- Tablet Screens */
+@media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collection-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: -0.5rem;
+    max-width: 520px;
+  }
+}
+
+/* Crew */
+#crew {
+  background: #F5F2EC;
+  color: #1F3442;
+  padding: 7rem 4rem;
+}
+
+#crew h2 {
+  font-size: clamp(2.75rem, 4.5vw, 4rem);
+  margin-bottom: 2.5rem;
+}
+
+.crew-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 5rem;
+  max-width: 75ch;
+}
+
+.crew-grid {
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.crew-card {
+  background: rgba(225, 225, 225, 0.55);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: transform .2s ease;
+}
+
+.crew-card:hover {
+  transform: translateY(-6px);
+}
+
+.crew-card img {
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.crew-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.crew-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.crew-card .crew-role {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.crew-card-content p {
+  line-height: 1.55;
+}
+
+/* Crew -- Cellphone Screens */
+@media only screen and (max-width: 47.5rem) {
+  #crew {
+    padding: 5rem 1.5rem;
+  }
+
+  #crew h2 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 1.05;
+    max-width: 10ch;
+  }
+
+  .crew-subtitle {
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 24ch;
+  }
+
+  .crew-card {
+    padding: 1.5rem;
+  }
+
+  .crew-card img {
+    aspect-ratio: 5 / 4;
+  }
+}
+
+/* Crew -- Tablet Screens */
+@media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
+  #crew h2 {
+    font-size: 3rem;
+  }
+
+  .crew-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+
+  .crew-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 420px;
+  }
+}
+
+/* Contact */
+#contact {
+  background: linear-gradient(rgba(31, 52, 66, 0.92), rgba(31,52,66, 0.92)), url('../img/rustic-wood-panels.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #F5F2EC;
+  padding: 7rem 4rem;
+}
+
+#contact h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin: 1.5rem 0 2rem;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  max-width: 75ch;
+  line-height: 1.8;
+}
+
+.contact-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.2fr 1.4fr 1fr 1fr;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.contact-logo-card,
+.contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 220px;
+  padding: 2rem 2.25rem;
+}
+
+.contact-logo-card {
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-logo-card img {
+  max-width: 190px;
+  width: 100%;
+}
+
+.contact-card {
+  line-height: 1.6;
+}
+
+.contact-card h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-card a {
+  color: #f5F2EC;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  opacity: 0.75;
+}
+
+/* Contact -- Mobile Screens */
+@media only screen and (max-width: 47.5rem) {
+  #contact {
+    background-attachment: scroll;
+    padding: 5rem 1.5rem;
+  }
+
+  #contact h2 {
+    font-size: clamp(2.6rem, 11vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    max-width: 28ch;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .contact-logo-card,
+  .contact-card {
+    min-height: auto;
+    padding: 1.75rem;
+  }
+
+  .contact-logo-card img {
+    max-width: 150px;
+  }
+}
+
+/* Contact -- Tablet Screens */
+@media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
+  #contact {
+    background-attachment: scroll;
+  }
+
+  #contact h2 {
+    font-size: 4rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-logo-card,
+  .contact-card {
+    min-height: 180px;
+  }
+
+  .contact-logo-card img {
+    max-width: 160px;
+  }
+}
+
+/* Footer */
+footer {
+  background: #162733;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #F5F2EC;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+/* Footer -- Cellphone screens */
+@media only screen and (max-width: 47.5rem) {
+  footer {
+    padding: 1.5rem 2rem;
+    line-height: 1.5;
+  }
+
+  footer span {
+    font-size: 0.95rem;
+    margin: auto;
+    max-width: 24ch;
+  }
+}
