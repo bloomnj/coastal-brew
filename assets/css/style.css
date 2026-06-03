@@ -151,15 +151,27 @@ nav a:hover {
 /* Header -- Tablet screens */
 @media only screen and (min-width: 47.5625rem) and (max-width: 64rem) {
   nav ul {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   header {
-    padding: 1.25rem 3rem;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    margin-left: 2rem;
+  }
+
+  li {
+    padding-right: 0;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
   }
 }
 
