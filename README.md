@@ -1,6 +1,7 @@
 # Coastal Brew
 
 Demo:  https://coastalbrew.suntheory.net
+
 Coastal Brew is a responsive static landing page for a coastal-inspired coffee brand. The site presents the brand philosophy, product collection, crew profiles, and contact details using a single HTML page with custom CSS and local image assets.
 
 ## Features
