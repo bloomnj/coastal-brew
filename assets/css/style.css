@@ -17,6 +17,13 @@ h2,
   font-family: 'Playfair Display', serif;
 }
 
+#philosophy,
+#collection,
+#crew,
+#contact {
+  scroll-margin-top: 4rem;
+}
+
 /* Universal Styles -- Cellphone Screens */
 @media only screen and (max-width: 47.5rem) {
   header,
@@ -38,6 +45,7 @@ h2,
   #contact {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    scroll-margin-top: 1rem;
   }
 
   .collection-grid,
@@ -674,7 +682,7 @@ nav a:hover {
     min-height: 180px;
   }
 
-  .contact-logo-card-img {
+  .contact-logo-card img {
     max-width: 160px;
   }
 }
@@ -684,7 +692,6 @@ footer {
   background: #162733;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   color: #F5F2EC;
-  margin-top: 4rem;
   padding: 2rem 4rem;
   text-align: center;
 }
@@ -696,7 +703,7 @@ footer {
     line-height: 1.5;
   }
 
-  footer p {
+  footer span {
     font-size: 0.95rem;
     margin: auto;
     max-width: 24ch;
